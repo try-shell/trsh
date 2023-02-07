@@ -1,6 +1,6 @@
 # Trsh
 A shell written in rust 😄
 
-## see
+## Reference
 - https://www.joshmcguigan.com/blog/build-your-own-shell-rust/
 - https://github.com/psinghal20/rush
