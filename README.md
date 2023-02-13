@@ -2,9 +2,10 @@
 A shell written in rust 😄
 
 ## Feature
-- [x] `|` pipe
+- [x] `|` pipes
 - [ ] `&&` 
 - [ ] `&` backend
+- [ ] color
 
 ## Reference
 - https://www.joshmcguigan.com/blog/build-your-own-shell-rust/
