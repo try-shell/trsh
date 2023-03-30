@@ -14,11 +14,11 @@ fn main() {
         stdin().read_line(&mut input).unwrap();
 
         // must be peekable so we know when we are on the last command
-        let mut commands = input.trim().split("|").peekable();
+        let mut commands = input.trim().split('|').peekable();
         let mut previous_command = None;
 
         while let Some(command) = commands.next() {
-            let mut parts = command.trim().split_whitespace();
+            let mut parts = command.split_whitespace();
             let command = parts.next().unwrap();
             let args = parts;
 
@@ -26,7 +26,7 @@ fn main() {
                 "cd" => {
                     let new_dir = args.peekable().peek().map_or("/", |x| *x);
                     let root = Path::new(new_dir);
-                    if let Err(e) = env::set_current_dir(&root) {
+                    if let Err(e) = env::set_current_dir(root) {
                         eprintln!("{}", e);
                     }
 
